@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import webbrowser, json
+import runner as r
 
 app = Flask(__name__)
 
@@ -14,6 +15,7 @@ def url():
         resp_json = request.get_json()
         f =  resp_json['text'] #link
         print(f)
+        r.parse2(f)
 
         return json.dumps({"response": "please wait"}), 200
 
