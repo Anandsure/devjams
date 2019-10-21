@@ -22,5 +22,5 @@ def get_senti(text):
     #print(json.dumps(response, indent=2))
 
 if __name__ == "__main__":
-    senti = get_senti('this product is amazing' )
+    senti = get_senti('this product is amazing')
     print(senti)

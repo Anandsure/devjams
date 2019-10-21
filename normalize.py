@@ -29,17 +29,17 @@ def get_nr():
     oor = su/len(x)
     print('or', oor)
 
-    for i in range(79):
+    for i in range(13):
         sentiment = senti.get_senti(text[i])
         temp = int(x[i])*sentiment['score']
-        #print(temp)
+        print(temp)
         time.sleep(0.2)
         y.append(temp)
 
     s=0
     for i in y:
-        s+=i+(i/2)
+        s+=i+(3*i/2)
     nr = s/len(y)
-    return nr
+    return [nr,oor]
 if __name__ == "__main__":
     print(get_nr())
