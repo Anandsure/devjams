@@ -5,7 +5,7 @@ from watson_developer_cloud.natural_language_understanding_v1 import Features, S
 
 def get_senti(text):
 
-    authenticator = IAMAuthenticator('ojIEjNup6zPaqmxbQ1aHBTS2goq592rwTiCC8uaIlE1s')
+    authenticator = IAMAuthenticator('{apikey}')
     natural_language_understanding = NaturalLanguageUnderstandingV1(
         version='2019-07-12',
         authenticator=authenticator
